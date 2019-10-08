@@ -198,6 +198,29 @@ header nav a:hover {
 	margin-bottom: 1rem;
 	align-items: center;
 }
+/* The animation code */
+@keyframes disco {
+	0% {
+		color: black;
+	}
+	25% {
+		color: lightslategray;
+	}
+	50% {
+		color: lightgray;
+	}
+	100% {
+		color: silver;
+	}
+}
+
+/* The element to apply the animation to */
+.cta .cta-text h1 {
+	color: black;
+	animation-name: disco;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
 h1 {
 	font-size: 4.5rem;
 	text-align: center;
