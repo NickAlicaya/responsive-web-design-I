@@ -156,7 +156,7 @@ html {
 	font-size: 16px;
 }
 .container {
-	width: 900px;
+	width: 1000px;
 
 	margin: auto;
 }
@@ -324,7 +324,7 @@ address {
 /* THIS STARTS THE MOBILE VIEW */
 @media (max-width: 500px) {
 	.container {
-		max-width: 500px;
+		/* max-width: 100%; */
 		margin: auto;
 	}
 	header nav {
@@ -346,9 +346,11 @@ address {
 	}
 
 	.logo {
-		width: 40%;
+		width: 70%;
 		height: 5vh;
-		margin: 1rem 0 0 0 auto;
+		margin: 1rem 0 0 0.5rem auto;
+		padding-left: 4rem;
+		padding-right: 4rem;
 		border-bottom: 1px solid black;
 	}
 	header nav a {
