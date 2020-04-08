@@ -1,3 +1,465 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+/* ul {
+	list-style: none;
+} */
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Bangers", cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+html {
+	font-size: 16px;
+}
+.container {
+	width: 1000px;
+
+	margin: auto;
+}
+header nav {
+	display: flex;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	justify-content: space-evenly;
+}
+header nav a {
+	color: silver;
+	text-decoration: none;
+	padding: 2%;
+	/* padding-right:5%; */
+}
+header nav a:hover {
+	border-bottom: 1px solid black;
+	background: #cdfeaa;
+}
+.links {
+	width: 70%;
+}
+
+.logo {
+	height: 2rem;
+	width: 20%;
+}
+.cta {
+	display: flex;
+	padding: 1rem;
+	justify-content: center;
+	align-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.cta-text {
+	width: 45%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	align-items: center;
+}
+/* The animation code */
+@keyframes disco {
+	0% {
+		color: black;
+	}
+	25% {
+		color: lightslategray;
+	}
+	50% {
+		color: lightgray;
+	}
+	100% {
+		color: silver;
+	}
+}
+
+/* The element to apply the animation to */
+.cta .cta-text h1 {
+	color: black;
+	animation-name: disco;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+h1 {
+	font-size: 4.5rem;
+	text-align: center;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.topbutton {
+	/* margin-left: 30%; */
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background: white;
+	border: 1px solid black;
+	text-align: center;
+	width: 10rem;
+	margin: auto;
+}
+.top-content {
+	display: flex;
+	border-top: 2px solid black;
+}
+#features {
+	margin-top: 1.5rem;
+}
+#about {
+	margin-top: 1.5rem;
+}
+
+.middle-img {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+.bottom-content {
+	display: flex;
+	margin: auto;
+}
+.text-content {
+	margin: auto;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	width: 45%;
+}
+
+.main-content {
+	margin-bottom: 1.5rem;
+	border-bottom: 2px solid black;
+}
+p {
+	margin-bottom: 1rem;
+}
+
+address {
+	margin-bottom: 1rem;
+}
+.phone {
+	padding-bottom: 1rem;
+}
+
+.copyright {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+/* This starts the TABLET view */
+
+@media (max-width: 800px) {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+	header nav {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+		margin-bottom: 0%;
+		flex-wrap: wrap;
+	}
+	.logo {
+		margin-bottom: 1rem;
+		margin-left: 1rem;
+		margin: auto;
+	}
+	.links {
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		margin: auto;
+	}
+	header nav a {
+		color: silver;
+		text-decoration: none;
+		padding: 1.5rem;
+	}
+	.cta {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: right;
+		margin: auto;
+		margin-top: 0;
+	}
+	.logo2 {
+		display: none;
+	}
+	.cta-text {
+		margin-left: 30%;
+	}
+	.main-content {
+		padding: 1rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	#contact {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+/* THIS STARTS THE MOBILE VIEW */
+@media (max-width: 500px) {
+	.container {
+		/* max-width: 100%; */
+		margin: auto;
+	}
+	header nav {
+		display: flex;
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		margin: 1rem 0 0 0;
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.logo {
+		width: 70%;
+		height: 5vh;
+		margin: 1rem 0 0 0.5rem auto;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		border-bottom: 1px solid black;
+	}
+	header nav a {
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		padding: 1rem;
+		border-bottom: 1px solid black;
+	}
+	.cta {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: right;
+		margin: auto;
+		margin-top: 0;
+	}
+	h1 {
+		font-size: 4rem;
+		margin: auto;
+		text-align: center;
+	}
+
+	.cta-text {
+		width: 100%;
+		margin: auto;
+
+		align-items: center;
+	}
+	.top-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+	.top {
+		width: 90%;
+	}
+	h4 {
+		width: 90%;
+		text-align: left;
+		margin-left: 0 auto;
+	}
+
+	.middle-img {
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-bottom: 1rem;
+	}
+	.bottom-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 90%;
+		/* padding-left: 10%;
+		padding-right: 10%; */
+		flex-wrap: wrap;
+	}
+	.text-content {
+		width: 90%;
+		margin: auto;
+	}
+	p {
+		margin-top: 1rem;
+	}
+	#contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		flex-wrap: wrap;
+		text-align: left;
+	}
+
+	email {
+		margin-left: 0;
+	}
+	footer {
+		text-align: center;
+	}
+}
